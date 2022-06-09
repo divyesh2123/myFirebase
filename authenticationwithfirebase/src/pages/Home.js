@@ -11,6 +11,7 @@ const Home = () => {
     firebaseDB.child("contacts").on("value", (snapshot) => {
       alert("Ddd")
       if (snapshot.val() !== null) {
+        console.log(snapshot.val());
         setData({ ...snapshot.val() });
       } else {
         setData({});
